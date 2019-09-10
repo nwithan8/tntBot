@@ -121,6 +121,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Config files
 bot_id.txt
 invite_link.txt
 token.txt
