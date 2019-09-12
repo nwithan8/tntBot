@@ -68,7 +68,7 @@ async def encrypt(ctx):
         title = "Copy",
         colour=discord.Colour.from_rgb(162, 0, 255)
     )
-    embed.set_footer(text="**tntBot made by Purple#4706**", icon_url="https://profilepicturesdp.com/wp-content/uploads/2018/06/best-discord-profile-picture-1.gif")
+    embed.set_footer(text="**tntBot**")
     embed.add_field(name="Encrypted message", value=encrypted.decode())
     embed.add_field(name="Decryption key", value=key.decode())
     await user.send(embed=embed)
@@ -160,26 +160,16 @@ async def invite(ctx):
     await ctx.send("To invite me to other servers please use this link: {}".format(link))
 
 
-#The .fucker command
 #Deletes all messages in the channel and then proceeds to spam the defined spam content 500 times
 
 
 @bot.command()
 @commands.has_permissions(administrator=True)
-async def fucker(ctx):
-    await ctx.send("Welcome {}, the server will be fucked".format(ctx.author))
+async def clearer(ctx):
+    await ctx.send("Welcome {}, the channel will be cleared".format(ctx.author))
     await asyncio.sleep(2)
     fuckedchannel = ctx.channel.id
-    print("Fucker started")
     await ctx.channel.purge(limit=999999999999)
-    amount = 500
-    for i in range(amount):
-        await ctx.send("F")
-        """@bot.event
-        async def on_message(message):
-            if message.channel.id == fuckedchannel:
-                if message.author.id != bot_id:
-                    await message.delete()"""
             
 
 #The .info command
@@ -191,9 +181,9 @@ async def info(ctx):
         description = "Here are all the available commands this Bot can perform.",
         colour=discord.Colour.from_rgb(162, 0, 255)
     )
-    embed.set_footer(text="**tntBot made by Purple#4706**", icon_url="https://profilepicturesdp.com/wp-content/uploads/2018/06/best-discord-profile-picture-1.gif")
+    embed.set_footer(text="**tntBot**")
     embed.add_field(name="User Commands", value=".invite | Get the invite link for this bot.\n.encrypt | Lets you encrypt a message in your DM's which another person can decrypt using the bot.\n.decrypt | Lets you decrypt an encrypted message.")
-    embed.add_field(name="Admin Commands", value=".spam *SPAMCONTENT*  | Spams the *SPAMCONTENT*  in the channel until an admin executes .stopspam (If .stopspam doesn't get executed, the bot will stop spamming after 500 messages.\n.fucker | Fucks the channel (**VERY** dangerous) \n.clear *AMOUNT*  | Deletes *AMOUNT*  messages in the channel")
+    embed.add_field(name="Admin Commands", value=".spam *SPAMCONTENT*  | Spams the *SPAMCONTENT*  in the channel until an admin executes .stopspam (If .stopspam doesn't get executed, the bot will stop spamming after 500 messages.\n.clearer | Deletes all messages in the channel.\n.clear *AMOUNT*  | Deletes *AMOUNT*  messages in the channel")
     await ctx.send(embed=embed)
 
 
