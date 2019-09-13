@@ -1,5 +1,5 @@
 # tntBot
-A highly customisable discord bot made in python using discord.py.
+A customisable discord bot made in python using discord.py.
 
 # Get started
 1. Install the newest version of python for your os (https://www.python.org/downloads/)
