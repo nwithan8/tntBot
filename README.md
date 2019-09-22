@@ -1,3 +1,4 @@
+![contributors](https://img.shields.io/github/contributors/tntpower10/tntBot)
 # tntBot
 A customisable discord bot made in python using discord.py.
 
