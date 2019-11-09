@@ -57,7 +57,7 @@ async def on_ready():
 @bot.command()
 async def encrypt(ctx):
     user = ctx.author
-    await user.send("Please enter the message to decrypt.")
+    await user.send("Please enter the message to encrypt.")
     response = await bot.wait_for('message', check=message_check(channel=ctx.author.dm_channel))
     message = response.content
     encoded = message.encode()
